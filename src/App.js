@@ -10,8 +10,8 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div className="App">
-            <Button type='primary'>enen</Button>
-            <div className='hahha'>演唱会</div>
+            <Button type='primary'>聚橙网</Button>
+            <div className='hahha'>样式匹配，放心使用</div>
           </div>
         </Router>
       </Provider>
