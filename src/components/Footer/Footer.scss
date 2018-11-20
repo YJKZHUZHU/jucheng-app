@@ -1,0 +1,47 @@
+.footer{
+    height: 2.13333rem;
+    border-top: 1px solid #e6e6e6;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    .tag{
+        width: 33.33%;
+        text-align: center;
+        font-size: .46rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #333;
+        p{
+            margin-bottom: .26rem;
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            background: url('http://image.juooo.com/group1/M00/01/81/rAoKmVuQecmATGXZAAAUKcf_gA0402.png') no-repeat;
+            background-size: 100%;
+            text-align: center;
+        }
+        .ac{
+            background: url('http://image.juooo.com/group1/M00/02/2A/rAoKNVuQedOARw84AAAJ8MlQ_ac653.png') no-repeat;
+            background-size: 100%;
+        }
+        .mi{
+            background: url('http://image.juooo.com/group1/M00/01/81/rAoKmVuQedqADpfXAAAQDvkHt5o350.png') no-repeat;
+            background-size: 100%;
+        }
+        
+    }
+    .active{
+        color: #ff7919;
+        p{
+            background-position: 0 100%;
+        }
+        .ac,.mi{
+            background-position: 0 100%;
+        }
+    }
+}

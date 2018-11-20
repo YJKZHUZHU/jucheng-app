@@ -1,12 +1,16 @@
 import React, { Component,Fragment } from 'react';
-import {Button} from 'antd-mobile'
-import {HashRouter as Router,Route,Link} from 'react-router-dom'
+import {HashRouter as Router,Route} from 'react-router-dom'
 import {Provider} from 'react-redux'
 import store from './store/index.js'
 import './index.scss'
 
 import Home from './views/Home/Home';
+import Action from './views/Action/Action';
+import My from './views/My/My';
+
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+
 
 class App extends Component {
   render() {
@@ -15,7 +19,12 @@ class App extends Component {
         <Router>
           <Fragment>
             <Header></Header>
+
+            <Route path="/Action" exact component={Action} />
+            {/* <Route path="/My" exact component={My} /> */}
             <Route path="/" exact component={Home} />
+
+            <Footer></Footer>
           </Fragment>
         </Router>
       </Provider>
