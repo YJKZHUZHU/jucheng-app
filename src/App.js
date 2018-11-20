@@ -3,6 +3,8 @@ import {Button} from 'antd-mobile'
 import {HashRouter as Router,Route,Link} from 'react-router-dom'
 import {Provider} from 'react-redux'
 import store from './store/index.js'
+import Home from './views/Home/index'
+import Tour from './views/Tour/Tour.js'
 import './index.scss'
 class App extends Component {
   render() {
@@ -10,8 +12,10 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div className="App">
-            <Button type='primary'>聚橙网</Button>
-            <div className='hahha'>样式匹配，放心使用</div>
+            
+            
+            <Route exact path='/' component={Home} ></Route>
+            <Route path='/Tour/moreTourShowList' component={Tour}></Route>
           </div>
         </Router>
       </Provider>
