@@ -1,0 +1,36 @@
+
+.header{
+    height: 1.88rem;
+    width: 100%;
+    line-height: 1.88rem;
+    border-bottom: 1px solid #e7e7e7;
+    .dcity{
+        width: 3.8rem;
+        padding-left: .2rem;
+        float: left;
+        font-size: .7rem;
+        i.icont{
+            font-size: .7rem;
+        }
+    }
+    .home_search{
+        float: right;
+        width: 12.6rem;
+        margin-right: 1rem;
+        font-size: .56rem;
+        padding: 0 .6rem;
+        box-sizing: border-box;
+        color: #b3b3b3;
+        background: #f0f0f0;
+        height: 1.28rem;
+        line-height: 1.28rem;
+        margin-top: .3rem;
+        border-radius: .2rem;
+        i.iconfont{
+            margin-right: .6rem;
+            margin-top: 2rem;
+            font-size: .56rem;
+        }
+
+    }
+}
