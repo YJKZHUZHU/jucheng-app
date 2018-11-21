@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { Toast } from 'antd-mobile'
-var page = 1;
+var page = 0;
 export const getMore = (list) => {
   return {
     type: 'GET_MORE',
