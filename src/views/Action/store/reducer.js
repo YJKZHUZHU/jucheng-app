@@ -119,9 +119,11 @@ export default (state = defaultState,action) =>{
     }
 
     if(action.type === DEFAULT_INFO){
+        console.log('默认的进来没')
         let newState = Object.assign({},state);
-            newState.goodList = action.data
-            newState.total = action.total
+        console.log(newState)
+        newState.goodList = action.data
+        newState.total = action.total
         return newState
     }
 
