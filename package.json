@@ -5,8 +5,10 @@
   "dependencies": {
     "antd-mobile": "^2.2.6",
     "axios": "^0.18.0",
+    "babel-plugin-import": "^1.11.0",
     "node-sass": "^4.10.0",
     "react": "^16.6.3",
+    "react-app-rewired": "^1.6.2",
     "react-dom": "^16.6.3",
     "react-redux": "^5.1.1",
     "react-router-dom": "^4.3.1",
