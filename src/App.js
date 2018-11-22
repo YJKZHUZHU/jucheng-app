@@ -4,14 +4,18 @@ import {HashRouter as Router,Route,Link} from 'react-router-dom'
 import {Provider} from 'react-redux'
 import store from './store/index.js'
 import './index.scss'
+import './style/base.scss';
+import WrappedNormalLoginForm from './container/login/login';
+import NormalLoginForm from './container/register/register';
+
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
         <Router>
           <div className="App">
-            <Button type='primary'>聚橙网</Button>
-            <div className='hahha'>样式匹配，放心使用</div>
+            <Route path='/login' component={WrappedNormalLoginForm}></Route>
+            <Route path='/register' component={NormalLoginForm}></Route>
           </div>
         </Router>
       </Provider>
@@ -22,5 +26,6 @@ class App extends Component {
     
   }
 }
+
 
 export default App;
