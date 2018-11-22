@@ -23,11 +23,14 @@ export default (state=defaultState,action)=>{
         for(var i=0;i<newState.list.length;i++){
            if (newState.list[i].show_id===newState.hash){
             newState.yanchu.push(newState.list[i])
-            // newState.yanchu=newState.list[0][i]
            }
         }
         console.log(newState.yanchu);
         return newState;
+    }
+    if(action.type=='TIAOZHUAN'){
+        console.log(1)
+        // push()
     }
     return state;
 }

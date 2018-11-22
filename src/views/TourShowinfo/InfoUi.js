@@ -1,6 +1,7 @@
 import React from 'react';
 import './Info.css';
 import { Modal} from 'antd-mobile';
+import {NavLink} from 'react-router-dom';
 // import './Info.scss'
 
 const InfoUI =(props)=>{
@@ -99,150 +100,6 @@ const InfoUI =(props)=>{
                         <article className="round-list">
                       	<div className="v-line"></div>	
                             <ul className="round-list-wrapper">
-                                {/* <li className="item  overdue">
-                                    <div className="item-left">
-                                        <span className="day">1.6</span>
-                                        <span className="time">周六 19:30</span>
-                                    </div>
-                                    <div className="item-center">
-                                        <div className="dot"></div>
-                                    </div>
-                                    <div className="item-right js-buy-ticket" id="82437">
-                                        <span>太原站</span>
-                                        <span className="locate"><i className="iconfont icon-dingwei"></i>山西大剧院</span>
-                                    </div>
-                                </li>
-                                <li className="item  overdue">
-                                    <div className="item-left">
-                                        <span className="day">5.5</span>
-                                        <span className="time">周六 19:30</span>
-                                    </div>
-                                    <div className="item-center">
-                                        <div className="dot"></div>
-                                    </div>
-                                    <div className="item-right js-buy-ticket" id="84156">
-                                        <span>大连站</span>
-                                        <span className="locate"><i className="iconfont icon-dingwei"></i>大连开发区大剧院</span>
-                                    </div>
-                                </li>
-                                <li className="item  overdue">
-                                    <div className="item-left">
-                                        <span className="day">5.19</span>
-                                        <span className="time">周六 20:00</span>
-                                    </div>
-                                    <div className="item-center">
-                                        <div className="dot"></div>
-                                    </div>
-                                    <div className="item-right js-buy-ticket" id="84345">
-                                        <span>昆明站</span>
-                                        <span className="locate"><i className="iconfont icon-dingwei"></i>昆明胜利堂剧院</span>
-                                    </div>
-                                </li>
-                                <li className="item  overdue">
-                                    <div className="item-left">
-                                        <span className="day">6.2</span>
-                                        <span className="time">周六 19:30</span>
-                                    </div>
-                                    <div className="item-center">
-                                        <div className="dot"></div>
-                                    </div>
-                                    <div className="item-right js-buy-ticket" id="84601">
-                                        <span>哈尔滨站</span>
-                                        <span className="locate"><i className="iconfont icon-dingwei"></i>哈尔滨国际会展体育中心环球剧场大剧场</span>
-                                    </div>
-                                </li>
-                                <li className="item  overdue">
-                                    <div className="item-left">
-                                        <span className="day">6.9</span>
-                                        <span className="time">周六 19:30</span>
-                                    </div>
-                                    <div className="item-center">
-                                        <div className="dot"></div>
-                                    </div>
-                                    <div className="item-right js-buy-ticket" id="84760">
-                                        <span>沈阳站</span>
-                                        <span className="locate"><i className="iconfont icon-dingwei"></i>辽宁大剧院</span>
-                                    </div>
-                                </li>
-                                <li className="item  overdue">
-                                    <div className="item-left">
-                                        <span className="day">6.16</span>
-                                        <span className="time">周六 20:00</span>
-                                    </div>
-                                    <div className="item-center">
-                                        <div className="dot"></div>
-                                    </div>
-                                    <div className="item-right js-buy-ticket" id="83658">
-                                        <span>石家庄站</span>
-                                        <span className="locate"><i className="iconfont icon-dingwei"></i>石家庄大剧院-大剧场</span>
-                                    </div>
-                                </li>
-                                <li className="item  overdue">
-                                    <div className="item-left">
-                                        <span className="day">7.14</span>
-                                        <span className="time">周六 20:00</span>
-                                    </div>
-                                    <div className="item-center">
-                                        <div className="dot"></div>
-                                    </div>
-                                    <div className="item-right js-buy-ticket" id="84887">
-                                        <span>佛山站</span>
-                                        <span className="locate"><i className="iconfont icon-dingwei"></i>顺德演艺中心大剧场</span>
-                                    </div>
-                                </li>
-                                <li className="item  overdue">
-                                    <div className="item-left">
-                                        <span className="day">7.21</span>
-                                        <span className="time">周六 20:00</span>
-                                    </div>
-                                    <div className="item-center">
-                                        <div className="dot"></div>
-                                    </div>
-                                    <div className="item-right js-buy-ticket" id="85104">
-                                        <span>合肥站</span>
-                                        <span className="locate"><i className="iconfont icon-dingwei"></i>安徽大剧院</span>
-                                    </div>
-                                </li>
-                                <li className="item  overdue">
-                                    <div className="item-left">
-                                        <span className="day">9.15</span>
-                                        <span className="time">周六 20:00</span>
-                                    </div>
-                                    <div className="item-center">
-                                        <div className="dot"></div>
-                                    </div>
-                                    <div className="item-right js-buy-ticket" id="87094">
-                                        <span>香港站</span>
-                                        <span className="locate"><i className="iconfont icon-dingwei"></i>九龙湾国际展贸中心 Music Zone</span>
-                                    </div>
-                                </li>
-                                <li className="item  overdue">
-                                    <div className="item-left">
-                                        <span className="day">11.17</span>
-                                        <span className="time">周六 19:30</span>
-                                    </div>
-                                    <div className="item-center">
-                                        <div className="dot"></div>
-                                    </div>
-                                    <div className="item-right js-buy-ticket" id="88583">
-                                        <span>重庆站</span>
-                                        <span className="locate"><i className="iconfont icon-dingwei"></i>重庆文化宫大剧院</span>
-                                    </div>
-                                </li>
-                                <li className="item active ">
-                                    <div className="item-left">
-                                        <span className="day">11.24</span>
-                                        <span className="time">周六 19:30</span>
-                                    </div>
-                                    <div className="item-center">
-                                        <div className="dot"></div>
-                                    </div>
-                                    <div className="item-right js-buy-ticket" id="88638">
-                                        <span>济南站</span>
-                                        <span className="locate"><i className="iconfont icon-dingwei"></i>历山剧院</span>
-                                    </div>
-                                    <div className="buy-btn btn btn-default" id="88638">购票</div>
-                                </li> */}
                                 {props.yanchu.map((item,index)=>{
                                     return item.cityItems.map((item,index)=>{
                                         return(
@@ -258,7 +115,8 @@ const InfoUI =(props)=>{
                                                     <span>{item.city_name}</span>
                                                     <span className="locate"><i className="iconfont icon-dingwei"></i>{item.city_name}剧院</span>
                                                 </div>
-                                                <div className="buy-btn btn btn-default" id="88638">购票</div>
+                                                <div className="buy-btn btn btn-default" id="88638" onClick={props.ont}>购票</div>
+                                                <NavLink className="buy-btn btn btn-default" to='/ticket/88570'> 购票</NavLink>
                                             </li> 
                                         )
                                     })

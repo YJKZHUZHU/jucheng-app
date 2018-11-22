@@ -53,6 +53,11 @@ const mapDispatchToProps=(dispatch)=>{
                 type:'CLOSE',
                 modal2:false
             })
+        },
+        ont:()=>{
+            dispatch({
+                type:'TIAOZHUAN'
+            })
         }
     }
 }
