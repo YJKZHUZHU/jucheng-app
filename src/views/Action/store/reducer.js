@@ -65,48 +65,7 @@ export default (state = defaultState,action) =>{
         return newState;
     }
 
-    // if(action.type === GET_GOODLIST){
-    //     let newState = Object.assign({},state);
-    //     axios.post('https://bird.ioliu.cn/v1/?url=https://m.juooo.com/Show/getShowList',{
-    //         city_id:'1',
-    //         category: action.caid,
-    //         page:'1'
-    //     }).then(result=>{
-    //         var data = result.data.data.list
-    //         var total = result.data.data.total
-    //         console.log(data)
-    //         newState.goodList = data
-    //         newState.total = total
-    //         newState.txt = '加载更多'
-    //         newState.cid = action.caid    
-    //     }).catch(err=>{
-    //         console.log(err)
-    //     })
-    //     return newState;
-    // }
-
     if(action.type === ADD_MORE){
-        // let newState = Object.assign({},state);
-        // let npage = state.pageNum;
-        // npage++;
-        // if(state.total > state.goodList.length){
-        // axios.post('https://bird.ioliu.cn/v1/?url=https://m.juooo.com/Show/getShowList',{
-        //     city_id:'1',
-        //     category:state.cid,
-        //     page: npage
-        // }).then(result=>{
-        //     var ndata = result.data.data.list
-        //     console.log(ndata)
-        //     newState.goodList=state.goodList.concat(ndata)
-        //     newState.pageNum=npage
-        // }).catch(err=>{
-        //     console.log(err)
-        // })
-        // }  else{
-        //     newState.txt="暂无更多"
-        // }  
-
-        // return newState;
         let newState = JSON.parse(JSON.stringify(state));
         newState.goodList = state.goodList.concat(action.list);
         newState.pageNum = action.page
@@ -119,9 +78,7 @@ export default (state = defaultState,action) =>{
     }
 
     if(action.type === DEFAULT_INFO){
-        console.log('默认的进来没')
         let newState = Object.assign({},state);
-        console.log(newState)
         newState.goodList = action.data
         newState.total = action.total
         return newState
