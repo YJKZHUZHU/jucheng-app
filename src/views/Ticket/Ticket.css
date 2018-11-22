@@ -1,0 +1,363 @@
+.navbar .navbar-inner1 {
+    /* display: flex; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0 0.68267rem 0 0.64rem;
+    /* width: 100%; */
+    height: 100%;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    align-items: center;
+}
+.to-home {
+    /* border-bottom: 1px solid #e7e7e7; */
+    background: url(./imgs/house-icon.png) no-repeat 0.7466666667rem 0.5973333333rem;
+    background-size: 0.704rem 0.6826666667rem;
+}
+.myjuooo {
+    background: url(./imgs/mine-icon.png) no-repeat 0.7466666667rem 0.5973333333rem;
+    background-size: 0.6613333333rem 0.64rem;
+}
+.poster {
+    position: relative;
+    width: 100%;
+    height: 11.264rem;
+    overflow: hidden;
+}
+.poster .img-fg1 {
+    width: 5.9733333333rem;
+    height: 7.936rem;
+    position: absolute;
+    top: 2.432rem;
+    left: 6.0133333333rem;
+    z-index: 9;
+    border: 0.064rem solid #fff;
+}
+.text-desc {
+    padding: 0 0.4266666667rem 0 0.64rem;
+    background: #fff;
+    position: relative;
+    margin-top: -2px;
+}
+.text-desc .title {
+    font-size: 0.7253333333rem;
+    padding-top: 3px;
+    margin-bottom: 0.5333333333rem;
+    word-break: break-word;
+    color: #212121;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-weight: bold;
+}
+.text-desc .row {
+    font-size: 0.5973333333rem;
+    color: #666;
+}
+.poster .poster-img .img-bg {
+    position: relative;
+    padding: 0.064rem;
+    width: 5.9733333333rem;
+    height: 7.936rem;
+    border: 3px solid #fff;
+}
+.poster .poster-bg-shadow {
+    opacity: 0.5;
+}
+.poster .poster-img {
+    z-index: 8;
+    -webkit-box-pack: center;
+    position: relative;
+    margin: 2.432rem 0 0.64rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.poster .poster-img .img-bg::after {
+    position: absolute;
+    /* right: 0; */
+    bottom: -0.192rem;
+    left: -1.5786666667rem;
+    margin: 0 auto;
+    width: 8.8533333333rem;
+    height: 0.832rem;
+    background: url(./imgs/shadow.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+    content: "";
+}
+.text-desc .venue {
+    display: block;
+}
+.fl {
+    float: left;
+}
+.text-desc .row .place {
+    float: left;
+    max-width: 10.4533333333rem;
+    display: -webkit-box;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.text-desc .row .icon-map-marker {
+    margin-left: 0.4266666667rem;
+    border-left: 1px solid #ccc;
+    padding: 0 1.0666666667rem 0 0.4266666667rem;
+    font-size: 0.6826666667rem;
+    vertical-align: text-bottom;
+    color: #666;
+    margin-top: 0.1066666667rem;
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+.text-desc .price {
+    padding: 0.2133333333rem 0 0.64rem;
+    font-size: 0.768rem;
+    color: #ff7919;
+}
+.text-desc .price .icon {
+    color: #ff7919;
+}
+.text-desc .price .num {
+    display: inline-block;
+}
+.text-desc .support {
+    -webkit-box-pack: justify;
+    border-top: 1px dashed #ccc;
+    height: 1.7066666667rem;
+    font-size: 0.5546666667rem;
+    line-height: 1.7066666667rem;
+    color: #999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+.text-desc .support .left .sup-item {
+    display: inline-block;
+    margin-left: 0.2773333333rem;
+    border: 1px solid #ff7919;
+    -webkit-border-radius: 0.064rem;
+    border-radius: 0.064rem;
+    padding: 0 0.1066666667rem;
+    height: 0.6826666667rem;
+    font-size: 0.4266666667rem;
+    line-height: 0.64rem;
+    color: #ff7919;
+}
+.vipcard {
+    border-top: 1px dashed #ccc;
+}
+.vipcard .row:last-child {
+    border-bottom: none;
+}
+.vipcard .row {
+    display: block;
+    width: 100%;
+    padding-top: 0.4266666667rem;
+    padding-bottom: 0.32rem;
+    font-size: 0.5546666667rem;
+    color: #999;
+    background: #fff;
+}
+.vipcard .row .left .sup.card-sup {
+    width: 11.0933333333rem;
+}
+.vipcard .row .left .sup {
+    width: 11.9466666667rem;
+}
+.vipcard .row .left .sup-wrap {
+    height: 0.9813333333rem;
+    overflow: hidden;
+}
+.vipcard .row .left .sup-item {
+    margin-bottom: 0.2773333333rem;
+}
+.vipcard .row .left .txt1 {
+    display: inline-block;
+    padding: 0 0.1066666667rem;
+    height: 0.64rem;
+    font-size: 0.4266666667rem;
+    text-align: center;
+    line-height: 0.64rem;
+    color: #ff7919;
+    border: 1px solid #ff7919;
+    border-radius: 0.1066666667rem;
+    margin-right: 0.2133333333rem;
+    margin-top: 0.1066666667rem;
+}
+.vipcard .row .right {
+    margin-right: 0.2133333333rem;
+    color: #666;
+}
+.vipcard .row .icon {
+    font-size: 0.85333rem;
+    color: #999;
+}
+.brief-intro {
+    margin: 0.4693333333rem 0;
+    padding: 0 0.64rem;
+    background: #fff;
+}
+.brief-intro .title {
+    padding-top: 0.96rem;
+    font-size: 0.6826666667rem;
+    font-weight: normal;
+    text-align: center;
+    color: #212121;
+}
+.brief-intro .brief-txt {
+    padding-top: 0.4266666667rem;
+    font-size: 0.5973333333rem;
+    line-height: 1.0666666667rem;
+}
+.brief-intro .go-detail {
+    padding: 0.7466666667rem 0;
+    font-size: 0.512rem;
+    color: #999;
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+.brief-intro .go-detail .icon {
+    position: absolute;
+    top: 0.7466666667rem;
+    right: 5.5466666667rem;
+    font-size: 0.768rem;
+    transform: rotate(90deg);
+}
+.icon.icon-menu-right:before {
+    content: '\e626';
+}
+.ad-box {
+    margin-top: 0.4693333333rem;
+}
+.ad-box img {
+    width: 100%;
+}
+.ticket-notice {
+    margin: 0.4693333333rem 0;
+    padding: 0 0.64rem;
+    background: #fff;
+}
+.ticket-notice .title {
+    padding-top: 0.96rem;
+    font-size: 0.6826666667rem;
+    font-weight: normal;
+    text-align: center;
+    color: #212121;
+}
+.ticket-notice .ticket-txt {
+    padding-top: 0.4266666667rem;
+    font-size: 0.5973333333rem;
+    overflow: hidden;
+}
+.ticket-notice .ticket-txt p {
+    line-height: 1.0666666667rem;
+}
+.ticket-notice .in-to-know {
+    margin-top: 0.32rem;
+    border-top: 1px dashed #ccc;
+    padding: 0.5546666667rem 0 0.7466666667rem;
+    font-size: 0.5546666667rem;
+    line-height: 0.7466666667rem;
+    color: #999;
+}
+.ticket-notice .in-to-know .text {
+    color: #666;
+}
+.empty {
+    width: 100%;
+    height: 2.1333333333rem;
+}
+.dt-action {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 499;
+    border-top: 1px solid #e7e7e7;
+    width: 100%;
+    height: 2.1333333333rem;
+    font-size: 0.7253333333rem;
+    color: #fff;
+    background: #d9d9d9;
+    text-align: center;
+}
+.dt-action .service-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 2.7733333333rem;
+    height: 100%;
+    background: #fff;
+}
+.dt-action .service-btn .icon {
+    display: block;
+    margin: 0 auto 0.128rem;
+    width: 0.7253333333rem;
+    height: 0.8106666667rem;
+    background: url(./imgs/kefu.png) no-repeat left top;
+    background-size: 100%;
+}
+.dt-action .service-btn .txt {
+    font-size: 0.4266666667rem;
+    color: #666;
+}
+.dt-action .service-btn .line {
+    display: block;
+    position: absolute;
+    top: 0.5333333333rem;
+    right: 0;
+    width: 0;
+    height: 1.28rem;
+    border-right: 1px solid #d8d8d8;
+}
+
+
+.dt-action .dt-action-btn {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-flex: 1;
+    height: 100%;
+    line-height: 2.1333333333rem;
+    text-align: center;
+    color: #666;
+    background: #fff;
+}
+.dt-action .bg-orange, .dt-action .seat-online {
+    color: #fff;
+    background: #ff7919;
+}
