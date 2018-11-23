@@ -8,10 +8,10 @@ const HeaderUI = (props) => {
     // console.log(props)
   return (
     <div className="header">
-        <div className="dcity">
+        <NavLink className="dcity" to='/Location'>
             <i className="iconfont">&#xe60d;</i>
             <span className="home_cityname">{props.address}</span>
-        </div>
+        </NavLink>
         <NavLink className="home_search" to="/Search">
             <i className="iconfont">&#xe617;</i>
             <span className="search_text">

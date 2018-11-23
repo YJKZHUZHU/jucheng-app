@@ -30,16 +30,16 @@ class Home extends Component {
 }
 
 
-const mapStateToProps = ({ Home }) => {
+const mapStateToProps = (state) => {
   return {
-    bannerList:Home.bannerList,
-    imgHeight:Home.imgHeight,
-    tagList:Home.tagList,
-    areaList:Home.areaList,
-    showList:Home.showList,
-    hotList:Home.hotList,
-    city_id:Headers.city_id,
-    changeClass:Home.changeClass
+    bannerList:state.Home.bannerList,
+    imgHeight:state.Home.imgHeight,
+    tagList:state.Home.tagList,
+    areaList:state.Home.areaList,
+    showList:state.Home.showList,
+    hotList:state.Home.hotList,
+    city_id:state.Header.city_id,
+    changeClass:state.Home.changeClass
   }
 }
 

@@ -7,6 +7,7 @@ import './index.scss'
 import Home from './views/Home/Home';
 import Action from './views/Action/Action';
 import Search from './views/Search/Search';
+import Location from './views/Location/Location';
 // import My from './views/My/My';
 
 
@@ -22,6 +23,7 @@ class App extends Component {
             <Route path="/Action" exact component={Action} />
             {/* <Route path="/My" exact component={My} /> */}
             <Route path="/Search" exact component={Search} />
+            <Route path="/Location" exact component={Location} />
             <Route path="/" exact component={Home} />
 
             <div style={{height:"3rem",lineHeight:"3rem"}}>&nbsp;</div>
