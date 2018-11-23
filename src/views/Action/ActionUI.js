@@ -12,7 +12,7 @@ const ActionUI = (props) => {
                     return(
                         <li 
                         key={index} 
-                        onClick={()=>{props.getData(item.caid)}}
+                        onClick={()=>{props.getData(item.caid,props.city_id)}}
                         >
                         <span
                         onClick={()=>{props.setnavNum(index)}}
@@ -49,7 +49,7 @@ const ActionUI = (props) => {
              })
              
          }
-         <div className='showMore' onClick={()=>{props.showMore(props.pageNum,props.total,props.goodList.length,props.cid)}}>{props.txt}</div>
+         <div className='showMore' onClick={()=>{props.showMore(props.pageNum,props.total,props.goodList.length,props.cid,props.city_id)}}>{props.txt}</div>
       </ul>
       </Fragment>
     )

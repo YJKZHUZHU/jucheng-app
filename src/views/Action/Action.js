@@ -21,9 +21,6 @@ class Action extends Component {
     componentWillMount() {
         this.props.init();
     }
-    componentDidMount(){
-        Toast.loading('加载中...');
-    }
 }
 
 
@@ -31,7 +28,7 @@ class Action extends Component {
 
 
 
-const mapStateToProps = ({ Action }) => {
+const mapStateToProps = ({ Action,Header }) => {
     return {
         navNum: Action.navNum,
         slTopBar: Action.slTopBar,
@@ -40,15 +37,15 @@ const mapStateToProps = ({ Action }) => {
         goodList: Action.goodList,
         txt: Action.txt,
         cid: Action.cid,
-        city_id:Action.city_id
+        city_id:Header.city_id
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        getData: (caid, num) => {
+        getData: (caid, num,city_id) => {
 
-            dispatch(getList(caid, num))
+            dispatch(getList(caid, num,city_id))
 
 
         },
@@ -58,13 +55,14 @@ const mapDispatchToProps = (dispatch) => {
         },
 
         //加载更多
-        showMore: (pagenum, total, length, cid) => {
-            dispatch(AddMore(pagenum, total, length, cid));
+        showMore: (pagenum, total, length, cid,city_id) => {
+            dispatch(AddMore(pagenum, total, length, cid,city_id));
         },
 
-        init: () => {
+        init: (city_id) => {
+            Toast.loading('加载中...');
             axios.post('https://bird.ioliu.cn/v1/?url=https://m.juooo.com/Show/getShowList', {
-                city_id: '1',
+                city_id: city_id,
                 category: '',
                 page: '1'
             }).then(result => {

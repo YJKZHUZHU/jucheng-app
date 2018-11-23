@@ -8,12 +8,12 @@ export const ChangeNavnum = (num) =>{
     }
 }
 
-export const getList = (caid) =>{
+export const getList = (caid,city_id) =>{
    
     return(dispatch,getState) => {
         Toast.loading('加载中...');
         axios.post('https://bird.ioliu.cn/v1/?url=https://m.juooo.com/Show/getShowList',{
-            city_id:'1',
+            city_id:city_id,
             category: caid,
             page:'1'
         }).then(result=>{
@@ -37,7 +37,7 @@ export const initList = (list,total,txt,caid) => {
         caid
     }
 }
-export const AddMore = (pagenum,total,length,cid) =>{
+export const AddMore = (pagenum,total,length,cid,city_id) =>{
     // return{
     //     type:ADD_MORE
     // }
@@ -47,7 +47,7 @@ export const AddMore = (pagenum,total,length,cid) =>{
         if(total > length){
         Toast.loading('加载中...');
         axios.post('https://bird.ioliu.cn/v1/?url=https://m.juooo.com/Show/getShowList',{
-            city_id:'1',
+            city_id:city_id,
             category: cid,
             page: npage
         }).then(result=>{
