@@ -6,6 +6,7 @@ import Home from './views/Home/index'
 import Tour from './views/Tour/Tour.js'
 import Search from './views/Home/Search/Search'
 import Seleted from './views/Home/Selected/Seleted'
+import Order from './views/Order/Order'
 import './index.scss'
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
             <Route path='/Tour/moreTourShowList' component={Tour}></Route>
             <Route path='/search/index' component={Search}></Route>
             <Route path='/index/selectCity' component={Seleted}></Route>
+            <Route path='/order/order' component={Order}></Route>
           </div>
         </Router>
       </Provider>

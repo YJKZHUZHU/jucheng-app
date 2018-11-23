@@ -30,6 +30,7 @@ const mapDispatchProps = (dispatch, getstate) => {
       var divt = window.getComputedStyle(divtemp).getPropertyValue("display");
       console.log(divt)
       if (divt == "none") {
+        console.log(1)
         divtemp.style.display = "block";
       } else {
         divtemp.style.display = "none";
