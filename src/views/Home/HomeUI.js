@@ -54,10 +54,10 @@ const HomeUI = (props) => {
 
         <div className="title ">巡回演出
           <div className="more">
-            <a href="/Tour/moreTourShowList"> 
+            <NavLink to="/Tour/moreTourShowList"> 
               更多巡演
               <i className="iconfont">&#xe662;</i> 
-            </a>
+            </NavLink>
           </div>
         </div>
 
