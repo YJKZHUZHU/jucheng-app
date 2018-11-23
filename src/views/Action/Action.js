@@ -1,36 +1,82 @@
-import React, { Component } from 'react';
+import React, { Component ,Fragment} from 'react';
 import { connect } from 'react-redux';
 import ActionUI from './ActionUI';
-
-
-// mapStateToProps 输入
-
-// mapDispatchToProps 输出
+import { getList, ChangeNavnum, AddMore, DefaultInfo } from './store/actionCreators';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+import { Toast } from 'antd-mobile';
+import axios from 'axios';
 
 class Action extends Component {
-  render() {
-    return(
-      <ActionUI></ActionUI>
-    )
-  }
-
-
-  componentDidMount() {
-
-  }
+    render() {
+        return (
+        <Fragment>
+            <Header/>
+            <ActionUI {...this.props}></ActionUI>
+            <Footer/>
+        </Fragment>
+            
+        )
+    }
+    componentWillMount() {
+        this.props.init();
+    }
+    componentDidMount(){
+        Toast.loading('加载中...', 1);
+    }
 }
+
+
+
+
 
 
 const mapStateToProps = ({ Action }) => {
-  return {
-    // address:"深圳"
-  }
+    return {
+        navNum: Action.navNum,
+        slTopBar: Action.slTopBar,
+        pageNum: Action.pageNum,
+        total: Action.total,
+        goodList: Action.goodList,
+        txt: Action.txt,
+        cid: Action.cid
+    }
 }
 
 const mapDispatchToProps = (dispatch) => {
-  return {
-    
-  }
+    return {
+        getData: (caid, num) => {
+
+            dispatch(getList(caid, num))
+
+
+        },
+        setnavNum: (num) => {
+
+            dispatch(ChangeNavnum(num));
+        },
+
+        //加载更多
+        showMore: (pagenum, total, length, cid) => {
+            dispatch(AddMore(pagenum, total, length, cid));
+        },
+
+        init: () => {
+            axios.post('https://bird.ioliu.cn/v1/?url=https://m.juooo.com/Show/getShowList', {
+                city_id: '1',
+                category: '',
+                page: '1'
+            }).then(result => {
+                var data = result.data.data.list
+                var total = result.data.data.total
+                dispatch(DefaultInfo(data, total))
+
+            }).catch(err => {
+                console.log(err)
+            })
+        }
+
+    }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Action);

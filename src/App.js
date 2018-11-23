@@ -2,6 +2,7 @@ import React, { Component,Fragment } from 'react';
 import {HashRouter as Router,Route} from 'react-router-dom'
 import {Provider} from 'react-redux'
 import store from './store/index.js'
+
 import './index.scss'
 
 import Home from './views/Home/Home';
@@ -28,6 +29,7 @@ class App extends Component {
 
             <div style={{height:"3rem",lineHeight:"3rem"}}>&nbsp;</div>
           </Fragment>
+
         </Router>
       </Provider>
      
