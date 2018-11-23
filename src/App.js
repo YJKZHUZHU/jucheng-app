@@ -1,18 +1,33 @@
-import React, { Component } from 'react';
-import {Button} from 'antd-mobile'
-import {HashRouter as Router,Route,Link} from 'react-router-dom'
+import React, { Component,Fragment } from 'react';
+import {HashRouter as Router,Route} from 'react-router-dom'
 import {Provider} from 'react-redux'
 import store from './store/index.js'
 import './index.scss'
+
+import Home from './views/Home/Home';
+import Action from './views/Action/Action';
+import Search from './views/Search/Search';
+import Location from './views/Location/Location';
+// import My from './views/My/My';
+
+
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
         <Router>
-          <div className="App">
-            <Button type='primary'>聚橙网</Button>
-            <div className='hahha'>样式匹配，放心使用</div>
-          </div>
+          <Fragment>
+
+            <div style={{height:"1.88rem",lineHeight:"1.88rem"}}>&nbsp;</div>
+            
+            <Route path="/Action" exact component={Action} />
+            {/* <Route path="/My" exact component={My} /> */}
+            <Route path="/Search" exact component={Search} />
+            <Route path="/Location" exact component={Location} />
+            <Route path="/" exact component={Home} />
+
+            <div style={{height:"3rem",lineHeight:"3rem"}}>&nbsp;</div>
+          </Fragment>
         </Router>
       </Provider>
      
