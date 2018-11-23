@@ -1,8 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component,Fragment } from 'react';
 import { connect } from 'react-redux';
 import HomeUI from './HomeUI';
 import store from '../../store/index'
-import { getBannerList,getShowList,getHotList,change } from './store/actionCreators';
+import { getBannerList,getShowList,getHotList } from './store/actionCreators';
+
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 
 // mapStateToProps 输入
 
@@ -11,7 +14,11 @@ import { getBannerList,getShowList,getHotList,change } from './store/actionCreat
 class Home extends Component {
   render() {
     return(
-      <HomeUI {...this.props}></HomeUI>
+      <Fragment>
+        <Header></Header>
+        <HomeUI {...this.props}></HomeUI>
+        <Footer></Footer>
+      </Fragment>
     )
   }
  
@@ -39,7 +46,6 @@ const mapStateToProps = ({ Home }) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onClick: () => {
-      // Home.changeClass = !Home.changeClass;
       dispatch({
         type: 'CHANGECLASS'
       })

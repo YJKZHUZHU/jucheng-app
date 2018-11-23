@@ -6,10 +6,8 @@ import './index.scss'
 
 import Home from './views/Home/Home';
 import Action from './views/Action/Action';
-import My from './views/My/My';
-
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+import Search from './views/Search/Search';
+// import My from './views/My/My';
 
 
 class App extends Component {
@@ -20,13 +18,12 @@ class App extends Component {
           <Fragment>
 
             <div style={{height:"1.88rem",lineHeight:"1.88rem"}}>&nbsp;</div>
-            <Header></Header>
             
             <Route path="/Action" exact component={Action} />
             {/* <Route path="/My" exact component={My} /> */}
+            <Route path="/Search" exact component={Search} />
             <Route path="/" exact component={Home} />
 
-            <Footer></Footer>
             <div style={{height:"3rem",lineHeight:"3rem"}}>&nbsp;</div>
           </Fragment>
         </Router>

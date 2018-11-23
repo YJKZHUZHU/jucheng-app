@@ -108,9 +108,9 @@ const HomeUI = (props) => {
           </NavLink>
           ))}          
         </div>
-        
-
       </div>
+      
+      <NavLink className="seeAll" to="/Action">查看全部演出 ></NavLink>
 
     </div>
   )
