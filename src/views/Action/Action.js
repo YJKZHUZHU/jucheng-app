@@ -22,7 +22,7 @@ class Action extends Component {
         this.props.init();
     }
     componentDidMount(){
-        Toast.loading('加载中...', 1);
+        Toast.loading('加载中...');
     }
 }
 
@@ -39,7 +39,8 @@ const mapStateToProps = ({ Action }) => {
         total: Action.total,
         goodList: Action.goodList,
         txt: Action.txt,
-        cid: Action.cid
+        cid: Action.cid,
+        city_id:Action.city_id
     }
 }
 
@@ -70,7 +71,7 @@ const mapDispatchToProps = (dispatch) => {
                 var data = result.data.data.list
                 var total = result.data.data.total
                 dispatch(DefaultInfo(data, total))
-
+                Toast.hide();
             }).catch(err => {
                 console.log(err)
             })

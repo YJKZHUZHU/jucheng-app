@@ -45,7 +45,8 @@ const defaultState = {
     total: 20,
     goodList: [],
     txt: '加载更多',
-    cid: ''
+    cid: '',
+    city_id: '',
 }
 
 export default (state = defaultState,action) =>{

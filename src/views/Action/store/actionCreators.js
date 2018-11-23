@@ -1,6 +1,6 @@
 import{NO_MORE,ADD_MORE,DEFAULT_INFO,INIT_LIST,CHANGE_NAVNUM} from './actionTypes'
 import axios from 'axios';
-
+import { Toast } from 'antd-mobile';
 export const ChangeNavnum = (num) =>{
     return{
         type: CHANGE_NAVNUM,
@@ -11,6 +11,7 @@ export const ChangeNavnum = (num) =>{
 export const getList = (caid) =>{
    
     return(dispatch,getState) => {
+        Toast.loading('加载中...');
         axios.post('https://bird.ioliu.cn/v1/?url=https://m.juooo.com/Show/getShowList',{
             city_id:'1',
             category: caid,
@@ -19,6 +20,7 @@ export const getList = (caid) =>{
             var data = result.data.data.list
             var total = result.data.data.total
             var txt = '加载更多'
+            Toast.hide();
             dispatch(initList(data,total,txt,caid))       
         }).catch(err=>{
             console.log(err)
@@ -43,6 +45,7 @@ export const AddMore = (pagenum,total,length,cid) =>{
         let npage = pagenum;
         npage++;
         if(total > length){
+        Toast.loading('加载中...');
         axios.post('https://bird.ioliu.cn/v1/?url=https://m.juooo.com/Show/getShowList',{
             city_id:'1',
             category: cid,
@@ -50,6 +53,7 @@ export const AddMore = (pagenum,total,length,cid) =>{
         }).then(result=>{
             var ndata = result.data.data.list
             dispatch(AddList(ndata,npage))
+            Toast.hide();
         }).catch(err=>{
             console.log(err)      
         })
