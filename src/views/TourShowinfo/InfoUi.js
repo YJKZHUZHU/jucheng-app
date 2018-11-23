@@ -36,7 +36,6 @@ const InfoUI =(props)=>{
                     onClose={props.onClose}
                     animationType="slide-up"
                     >
-                    {/* <List renderHeader={() => <div>分享</div>} className="popup-list"> */}
                     <div className="share-layout" style={{'height': '9.05333rem'}}>
                         <div className="title">分享<i className="icon icon-remove js-share-close js-close-btn"></i></div>
                         <div className="share-methods">
@@ -55,7 +54,6 @@ const InfoUI =(props)=>{
                         </div>
                     </div>
                        
-                    {/* </List> */}
                 </Modal>
                 <div className='pages'>
                     <main className='js-main-content'>
@@ -115,7 +113,6 @@ const InfoUI =(props)=>{
                                                     <span>{item.city_name}</span>
                                                     <span className="locate"><i className="iconfont icon-dingwei"></i>{item.city_name}剧院</span>
                                                 </div>
-                                                <div className="buy-btn btn btn-default" id="88638" onClick={props.ont}>购票</div>
                                                 <NavLink className="buy-btn btn btn-default" to='/ticket/88570'> 购票</NavLink>
                                             </li> 
                                         )

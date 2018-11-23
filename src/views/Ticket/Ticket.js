@@ -5,8 +5,14 @@ import axios from 'axios';
 import store from '../../store/index'
 
 class Tickets extends Component{
+    shouldComponentUpdate(){
+        if(this.props.info.length!==0){
+            return false
+        }else{
+            return true
+        }
+    }
     componentWillMount(){
-        // console.log(3)
         this.getinfo()
     }
     
@@ -20,7 +26,7 @@ class Tickets extends Component{
             axios.get('https://bird.ioliu.cn/v1/?url=m.juooo.com/index/hotsShowList').then((res)=>{
             for(var i=0;i<result.data.data.list.length;i++){
 
-                if(result.data.data.list[i].id===this.props.location.pathname.split('/')[2]){
+                if(result.data.data.list[i].venue_id===this.props.location.pathname.split('/')[2]){
                     for(var j=0;j<res.data.data.length;i++){
                         if(res.data.data[j].show_id===result.data.data.list[i].show_id){
                             store.dispatch({

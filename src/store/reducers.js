@@ -5,13 +5,16 @@ import MyReducer from '../views/My/store/reducer.js'
 import TourReducer from '../views/Tour/store/reducer.js'
 import Info from '../views/TourShowinfo/store/reducer.js'
 import Ticket from '../views/Ticket/store/reducer.js'
+import Price from '../views/price/store/reducer.js'
+
 let totalReducer = combineReducers({
   Home: HomeReducer,
   Action: ActionReducer,
   My:MyReducer,
   Tour:TourReducer,
   Info,
-  Ticket
+  Ticket,
+  Price
 })
 // console.log(totalReducer)
 export default totalReducer

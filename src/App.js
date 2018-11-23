@@ -7,6 +7,7 @@ import './index.scss';
 
 import TourShowinfo from './views/TourShowinfo/Info';
 import Ticket from './views/Ticket/Ticket';
+import Price from './views/price/price';
 
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
           <Fragment>
             <Route path='/TourShowinfo' component={TourShowinfo}></Route>
             <Route path='/Ticket' component={Ticket}></Route>
+            <Route path='/price' component={Price}></Route>
           </Fragment>
         </Router>
       </Provider>

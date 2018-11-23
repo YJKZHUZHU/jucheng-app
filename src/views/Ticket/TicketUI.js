@@ -1,11 +1,12 @@
 import React,{Fragment} from 'react';
 import { Popover, NavBar, Icon } from 'antd-mobile';
+import {NavLink} from 'react-router-dom';
+
 import './Ticket.css';
 
 const Item = Popover.Item;
 
 const TicketUI =(props)=>{
-    console.log('更新');
     return(
         <Fragment>
                 <NavBar
@@ -56,7 +57,9 @@ const TicketUI =(props)=>{
                                 <Fragment  key={index} >
                                     {/* 演出海报 */}
                                     <article className="poster img-wrap js-sche-wrap ab-light"style={{backgroundColor: 'rgb(9, 22, 38)'}}>
-                                        <img className="img-fg1" id="img" src={require=item.pic} alt="【万有音乐系】《V.K克“时空涟漪”2018巡回演奏会》---杭州"/>
+                                        <img className="img-fg1" id="img" 
+                                        src={require=item.pic} 
+                                        alt="【万有音乐系】《V.K克“时空涟漪”2018巡回演奏会》---杭州"/>
                                         <div className="poster-bg-shadow">
                                         </div>
                                         <div className="poster-bg-wrapper">
@@ -127,7 +130,9 @@ const TicketUI =(props)=>{
                     </article>
                     <div className="ad-box">
                         <a href="https://click.juooo.com/click/index?url=https%3A%2F%2Fm.juooo.com%2FDistributor%2Fcentre&amp;type=1&amp;ad_id=58&amp;flag=TSF">
-                            <img src={require=("http://image.juooo.com/group1/M00/01/73/rAoKmVtz3gmAVyioAAB9UlGkigo299.jpg")} title="邀请你成为聚橙分享家" alt="邀请你成为聚橙分享家"/>
+                            <img 
+                            src={require=("http://image.juooo.com/group1/M00/01/73/rAoKmVtz3gmAVyioAAB9UlGkigo299.jpg")} 
+                            title="邀请你成为聚橙分享家" alt="邀请你成为聚橙分享家"/>
                         </a>
                     </div>
                     {/* 购票须知 */}
@@ -151,8 +156,7 @@ const TicketUI =(props)=>{
                             <span className="txt">客服</span>
                             <span className="line"></span>
                         </div>
-                        
-                        <div className="dt-action-btn bg-orange buy-now">立即购票</div>
+                        <NavLink className="dt-action-btn bg-orange buy-now" to='/price'>立即购票</NavLink>
                     </div>
                 </div>
             </div>
