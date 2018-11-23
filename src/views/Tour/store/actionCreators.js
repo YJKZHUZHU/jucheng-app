@@ -13,14 +13,12 @@ export const get = (e) => {
     const api = 'https://bird.ioliu.cn/v1/?url=';
     axios.get(api + 'https://m.juooo.com/tour/ShowList?page=' + page).then((result) => {
       console.log(result.data.data.length === 0)
-      if (result.data.data.length === 0){
+      if (result.data.data.length === 0) {
         const noMore = document.getElementById('noMore')
         noMore.innerHTML = '没有更多了'
-        Toast.info('没有更多了', 1);
-      }else {
-        Toast.loading('请稍等...', 1, () => {
-          console.log('加载成功');
-        });
+        Toast.offline('没有更多了。。。。', 1);
+      } else {
+        
         console.log(result.data.data);
         dispatch(getMore(result.data.data));
       }

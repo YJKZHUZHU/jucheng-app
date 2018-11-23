@@ -3,6 +3,7 @@ import TourUI from './TourUI'
 import React, { Component } from 'react'
 import store from '../../store/index'
 import { get } from './store/actionCreators';
+import { Toast } from 'antd-mobile'
 class Tour extends Component {
   render() {
     return (
@@ -10,6 +11,9 @@ class Tour extends Component {
     );
   }
   componentDidMount() {
+    Toast.loading('加载中...', 1, () => {
+      console.log('加载成功');
+    });
     store.dispatch(get());
   }
 }
