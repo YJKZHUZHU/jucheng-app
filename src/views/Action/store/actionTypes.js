@@ -1,0 +1,6 @@
+export const CHANGE_NAVNUM = 'CHANGE_NAVNUM'
+export const GET_GOODLIST = 'GET_GOODLIST'
+export const ADD_MORE = 'ADD_MORE'
+export const DEFAULT_INFO = 'DEFAULT_INFO'
+export const INIT_LIST = 'INIT_LIST'
+export const NO_MORE = 'NO_MORE'
