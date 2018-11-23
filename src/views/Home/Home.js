@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import HomeUI from './HomeUI';
-import axios from 'axios';
+import store from '../../store/index'
+import { getBannerList,getShowList,getHotList,change } from './store/actionCreators';
 
 // mapStateToProps 输入
 
@@ -10,26 +11,39 @@ import axios from 'axios';
 class Home extends Component {
   render() {
     return(
-      <HomeUI></HomeUI>
+      <HomeUI {...this.props}></HomeUI>
     )
   }
-
-
+ 
   componentDidMount() {
-
+    store.dispatch(getBannerList());
+    store.dispatch(getShowList());
+    store.dispatch(getHotList(Home.city_id));
   }
 }
 
 
 const mapStateToProps = ({ Home }) => {
   return {
-    // address:"深圳"
+    bannerList:Home.bannerList,
+    imgHeight:Home.imgHeight,
+    tagList:Home.tagList,
+    areaList:Home.areaList,
+    showList:Home.showList,
+    hotList:Home.hotList,
+    city_id:Headers.city_id,
+    changeClass:Home.changeClass
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    
+    onClick: () => {
+      // Home.changeClass = !Home.changeClass;
+      dispatch({
+        type: 'CHANGECLASS'
+      })
+    }
   }
 }
 

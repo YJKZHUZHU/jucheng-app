@@ -18,13 +18,16 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <Fragment>
-            <Header></Header>
 
+            <div style={{height:"1.88rem",lineHeight:"1.88rem"}}>&nbsp;</div>
+            <Header></Header>
+            
             <Route path="/Action" exact component={Action} />
             {/* <Route path="/My" exact component={My} /> */}
             <Route path="/" exact component={Home} />
 
             <Footer></Footer>
+            <div style={{height:"3rem",lineHeight:"3rem"}}>&nbsp;</div>
           </Fragment>
         </Router>
       </Provider>

@@ -45,7 +45,7 @@ export const getAddress = () => {
           var city_name = result.one.split('').slice(0,2).join('');
           var city_id = 0;
           for(var i = 0; i < result.two.length; i++){
-            if(result.two[i].name == city_name){
+            if(result.two[i].name === city_name){
               city_id = result.two[i].id;
             }
           }

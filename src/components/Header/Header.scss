@@ -4,6 +4,10 @@
     width: 100%;
     line-height: 1.88rem;
     border-bottom: 1px solid #e7e7e7;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    background: #fff;
     .dcity{
         width: 3.8rem;
         padding-left: .2rem;

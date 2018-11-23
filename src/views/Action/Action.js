@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ActionUI from './ActionUI';
-import axios from 'axios';
+
 
 // mapStateToProps 输入
 

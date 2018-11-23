@@ -1,2 +1,311 @@
+.home{
+    width: 100%;
+    background: #fff;
+    .all_tag{
+        width: 100%;
+        .tag_main{
+            margin: 0.42667rem 0.53333rem 0;
+            padding: 0.576rem 0;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            border-radius: 0.21333rem;
+            box-shadow: 0.10667rem 0.10667rem 0.21333rem rgba(178, 178, 178, 0.1);
+            .cate-link {
+                display: block;
+                text-align: center;
+                flex: 1;
+                -ms-flex: 1;
+                -webkit-flex: 1;
+                box-flex: 1;
+                -ms-box-flex: 1;
+                -webkit-box-flex: 1;
+                .img-box img {
+                    width: 2.24rem;
+                }
+                .classify {
+                    font-size: 0.512rem;
+                    color: #333;
+                    margin-top: .2rem;
+                }
+            }
+            
+        }
+    }
 
+    .module-wrap{
+        padding: 0.85333rem 0.53333rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: start;
+        .item {
+            margin-right: 0.32rem;
+            color: #fff;
+            position: relative;
+            z-index: 0;
+            flex: 1;
+            -ms-flex: 1;
+            -webkit-flex: 1;
+            box-flex: 1;
+            -ms-box-flex: 1;
+            -webkit-box-flex: 1;
+            img {
+                border-radius: 0.21333rem;
+                vertical-align: middle;
+                width: 100%;
+            }
+            .item-txt {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                text-align: center;
+                line-height: 2.13333rem;
+                font-size: 0.59733rem;
+                color: #fff;
+                z-index: 99;
+            }
+        }
+    }
+
+    .show{
+        padding: 0.42667rem 0 0.64rem 0.53333rem;
+        background: #fff;
+        margin-bottom: 0.42667rem;
+        overflow: hidden;
+        .title {
+            font-size: 0.768rem;
+            color: #1a1a1a;
+            margin-bottom: 0.53333rem;
+            position: relative;
+            font-weight: bold;
+            .more {
+                font-size: 0.46933rem;
+                color: #999;
+                position: absolute;
+                top: 0;
+                right: 0.42667rem;
+                font-weight: normal;
+                a,a i.iconfont{
+                    font-size: 0.46933rem;
+                    color: #999;
+                }
+            }
+        }
+        .show_all{
+            overflow: scroll;
+            white-space: nowrap;
+            display: flex;
+            .show_tag{
+                // float: left;
+                width: 5.32rem;
+                // height: 6.25067rem;
+                margin-right: 0.21333rem;
+                border-radius: 0.21333rem;
+                // overflow: hidden;
+            }
+            a.tour{
+                display: block;
+                width: 100%;
+                height: 7.1rem;
+                position: relative;
+                overflow: hidden;
+                // background: #f0f0f0 url(../images/index/bg1.png) no-repeat center center;
+                background-size: 2.53867rem 2.53867rem;
+                img{
+                    width: 100%;
+                    border-radius: .2rem;
+                }
+                p.tour-city {
+                    position: relative;
+                    top: -1.2rem;
+                    width: 100%;
+                    color: #B2B2B2;
+                    font-size: 0.512rem;
+                    z-index: 10;
+                    height: 1.17333rem;
+                    line-height: 1.17333rem;
+                    padding: 0 0.32rem;
+                    background: rgba(0, 0, 0, 0.5);
+                    overflow: hidden;
+                    word-break: break-all;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    border-radius:  0 0 .2rem .2rem;
+                }
+            }
+        }
+        .show_all::-webkit-scrollbar{
+            display: none;
+        }
+    }
+
+    .hot{
+        padding: 0 0.53333rem; 
+        .title {
+            font-size: 0.768rem;
+            color: #333;
+            padding: 0 0 0.21333rem;
+            font-weight: bold;
+            background: #fff;
+            position: relative;
+            .switch-bar {
+                width: 0.768rem;
+                height: 0.768rem;
+                position: absolute;
+                top: 0;
+                right: 0.64rem;
+            }
+            div.iconfont{
+                background: #fff;
+                color: #666;
+            }
+        }
+        .hot_list{
+            .show-item1 {
+                display: inline-block;
+                // float: left;
+                position: relative;
+                width:  5.36rem;
+                margin-right: 0.2rem;
+                padding: 0.32rem 0;
+                .poster-box {
+                    position: relative;
+                    width: 5.36rem;
+                    // height: 6.25067rem;
+                    margin-bottom: 0.21333rem;
+                    .poster-pic {
+                        vertical-align: middle;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 0.21333rem;
+                    }
+                    .logo_i {
+                        width: 1.23733rem;
+                        height: 1.49333rem;
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: .2rem;
+                        background: url('https://m.juooo.com/public/basic/Home/app/app-juooo5/images/juooo.png') 0 0 no-repeat;
+                        background-size: 100%;
+                    }
+                }
+                .poster-name {
+                    color: #1a1a1a;
+                    padding: 0 0.17067rem;
+                    font-size: 0.59733rem;
+                    font-weight: bold;
+                    overflow: hidden;
+                    word-break: break-all;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .poster-time {
+                    font-size: 0.512rem;
+                    color: #b3b3b3;
+                    padding: 0.17067rem 1.70667rem 0.17067rem 0.17067rem;
+                    overflow: hidden;
+                    word-break: break-all;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    line-height: 0.59733rem;
+                    position: relative;
+                    .poster-address {
+                        display: inline-block;
+                        position: absolute;
+                        right: 0.17067rem;
+                        max-width: 1.70667rem;
+                        overflow: hidden;
+                        word-break: break-all;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                }
+                .price{
+                    display: none;
+                }
+            }
+            .show-item1:nth-child(3n){
+                margin-right: 0;
+            }
+            .show-item2{
+                padding: 0.32rem 0;
+                width: 100%;
+                display: block;
+                height: 5.4rem;
+                border-bottom: 1px solid #e6e6e6;
+                .poster-box{
+                    width: 3.84rem;
+                    height: 5.12rem;
+                    margin-right: 0.53333rem;
+                    position: relative;
+                    border: 1px solid #f2f2f2;
+                    display: inline-block;
+                    float: left;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        border: 1px solid #fff;
+                    }
+                    .logo_i {
+                        width: 1.23733rem;
+                        height: 1.49333rem;
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: .2rem;
+                        background: url('https://m.juooo.com/public/basic/Home/app/app-juooo5/images/juooo.png') 0 0 no-repeat;
+                        background-size: 100%;
+                    }
+                }
+                .poster-ctn{
+                    width: 10.34667rem;
+                    float: left;
+                    .poster-name{
+                        min-height: 0.85333rem;
+                        font-size: 0.59733rem;
+                        padding-top: 0.10667rem;
+                        margin-bottom: 0.21333rem;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        font-weight: normal;
+                        line-height: .8rem;
+                        color: #333;
+                    }
+                    .poster-time {
+                        font-size: 0.512rem;
+                        color: #b3b3b3;
+                        padding: 0.17067rem 1.70667rem 0.17067rem 0.17067rem;
+                        overflow: hidden;
+                        word-break: break-all;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        line-height: 0.59733rem;
+                        position: relative;
+                        margin-top: .6rem;
+                    }
+                }
+                .price{
+                    float: right;
+                    min-width: 3.15733rem;
+                    padding: 0 0.36267rem;
+                    height: 1.472rem;
+                    background: url('https://m.juooo.com/public/basic/Home/app/app-juooo5/images/index/bg-priceBtn.png') no-repeat center center;
+                    background-size: 100% 100%;
+                    line-height: 1.17333rem;
+                    color: #fff;
+                    text-align: center;
+                    margin-top: .6rem;
+                }
+            }
+        }
+    }
+}
 
