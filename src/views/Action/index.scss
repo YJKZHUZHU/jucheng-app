@@ -1,0 +1,124 @@
+.topNavWrap{
+   position: fixed;
+   background: #fff;
+   top:1.8rem;
+   left: 0;
+   right: 0;
+   z-index: 999;
+}
+.topNav{
+    display: -webkit-box;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 1.6rem;
+    background: #fff;
+ }
+ .topNav::-webkit-scrollbar{width:0;}
+ .topNav li{
+    height: 1.472rem;
+    padding-left: 0.5973333333rem;
+    padding-right: 0.5973333333rem;
+    text-align: center;
+    line-height: 1.472rem;
+    font-size: 0.512rem; 
+    background: #fff;
+ }
+ 
+ .topNav li span{
+    display: inline-block;
+    width: 100%;
+    height: 1.2rem;
+ }
+ .navitem{
+    color: #666666;
+ }
+ .ative_navitem{
+    color:#ff7919;
+    font-weight: bold;
+    border-bottom: #ff7919 2px solid;
+ }
+ .infoList{
+    padding-top: 0.5rem; 
+    background: #f2f2f2;
+    margin-top: 1.5rem;
+ }
+ .logo_i{
+   width: 29px;
+   height: 35px;
+   display: block;
+   position: absolute;
+   top: 0;
+   right: 0;
+   background: url(https://m.juooo.com/public/basic/Home/app/common/images/juooo.png) 0 0 no-repeat;
+   background-size: 100%;
+ }
+
+ .infoList li{
+    overflow: hidden;
+    background: #fff;
+    padding: 0.32rem 0.5rem;
+    border-bottom: 1px solid #e6e6e6;
+
+ }
+ .list_img{
+    position: relative;
+    float: left;
+ }
+ .list_img img{
+    width: 4rem;
+ }
+ .list_txt{
+    float: left;
+    width:11.5rem;
+    margin-left: 0.5rem;
+    color: #262626;
+ }
+ .list_txt_tit{
+    min-height: 0.8533333333rem;
+    max-height: 1.536rem;
+    line-height: 0.8106666667rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    font-size: 0.7rem;
+    color: #262626;
+    margin-bottom: 0.5333333333rem;
+    margin-top: 0.3rem;
+ }
+ .list_showtime{
+    display: -webkit-box;
+    width: 100%;
+    height: 0.7466666667rem;
+    line-height: 0.7466666667rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-size: 0.4693333333rem;
+    color: #999999;
+ }
+ .list_addr{
+    display: -webkit-box;
+    width: 100%;
+    height: 0.7466666667rem;
+    line-height: 0.7466666667rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-size: 0.4693333333rem;
+    color: #999999;
+ }
+ .list_price{
+    margin-top: 0.5333333333rem;
+    font-size: 0.6826666667rem;
+    line-height: 0.6826666667rem;
+    color: #ff7919;
+ }
+ .showMore{
+     height: 2rem;
+     background: #fff;
+     text-align: center;
+     line-height: 2rem;
+ }

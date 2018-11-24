@@ -13,7 +13,7 @@ const InfoUI =(props)=>{
                 <header className="navbar detail-header">
                     <div className="navbar-inner navbar-on-center">
                         <div className="left js-personal-link">
-                            <a href="javascript:;" className="link">
+                            <a href="javascript:history.go(-1);" className="link">
                                 <span className="iconfont icon-jiantou2"></span>
                             </a>
                         </div>

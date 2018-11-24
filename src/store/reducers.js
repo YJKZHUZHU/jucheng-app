@@ -7,6 +7,8 @@ import Info from '../views/TourShowinfo/store/reducer.js'
 import Ticket from '../views/Ticket/store/reducer.js'
 import Price from '../views/price/store/reducer.js'
 
+import HeaderReducer from '../components/Header/store/reducer.js'
+import LocationReducer from '../views/Location/store/reducer.js'
 let totalReducer = combineReducers({
   Home: HomeReducer,
   Action: ActionReducer,
@@ -14,7 +16,9 @@ let totalReducer = combineReducers({
   Tour:TourReducer,
   Info,
   Ticket,
-  Price
+  Price,
+  Header:HeaderReducer,
+  Location:LocationReducer
 })
 // console.log(totalReducer)
 export default totalReducer

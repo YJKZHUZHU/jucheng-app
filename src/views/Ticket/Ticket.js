@@ -29,12 +29,12 @@ class Tickets extends Component{
 
     getinfo(){
         axios.get(`https://bird.ioliu.cn/v1/?url=m.juooo.com/Show/getShowList`).then((result)=>{
-            console.log(result.data)
+            // console.log(result.data)
             axios.get('https://bird.ioliu.cn/v1/?url=m.juooo.com/index/hotsShowList').then((res)=>{
             for(var i=0;i<result.data.data.list.length;i++){
-                console.log(res.data)
+
                 if(result.data.data.list[i].venue_id===this.props.location.pathname.split('/')[2]){
-                    for(var j=0;j<res.data.data.length;i++){
+                    for(var j=0;j<res.data.data.length;j++){
                         if(res.data.data[j].venue_id===result.data.data.list[i].venue_id){
                             store.dispatch({
                                 type:'GETINFO',
@@ -44,12 +44,13 @@ class Tickets extends Component{
                             Toast.hide();
                         }
                     }
-                }else{
-                    const {history}=this.props
-                    history.replace("/");
-                    alert('这个数据不存在')
-                    return false
                 }
+                // else{
+                //     const {history}=this.props
+                //     history.replace("/");
+                //     alert('这个数据不存在')
+                //     return false
+                // }
             }
             }).catch((res)=>{
                 console.log(res);

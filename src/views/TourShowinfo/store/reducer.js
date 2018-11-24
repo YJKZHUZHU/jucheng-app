@@ -22,7 +22,8 @@ export default (state=defaultState,action)=>{
         newState.hash=action.hash;
         for(var i=0;i<newState.list.length;i++){
            if (newState.list[i].show_id===newState.hash){
-            newState.yanchu.push(newState.list[i])
+               
+            newState.yanchu=[newState.list[i]]
            }
         }
         console.log(newState.yanchu);

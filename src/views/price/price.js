@@ -14,7 +14,8 @@ const mapStateToProps=({Price})=>{
     return {
         price:Price.price,
         total:Price.total,
-        onePrice:Price.onePrice
+        onePrice:Price.onePrice,
+        sum:Price.sum
     }
     
 }

@@ -77,7 +77,7 @@ const PriceUI =(props)=>{
                     <div className="action-left">
                         <span className="sele-num js-sele-num">
                                 <i className="icon icon-unie624" id='show' onClick={props.show}></i>
-                                <span className="num">{props.onePrice.length}</span>张
+                                <span className="num">{props.sum}</span>张
                         </span>
                         <span className="line"></span>
                         <span className="sele-price js-sele-price"><i className="icon icon-yuan"></i>{props.total}</span>

@@ -17,7 +17,7 @@ export default (state=defaultState,action)=>{
     if(action.type==='GETINFO'){
         let newState=JSON.parse(JSON.stringify(state));
         // console.log(222)
-        newState.info.push(action.info);
+        newState.info=[action.info];
         newState.hash=action.hash;
         console.log(newState)
        

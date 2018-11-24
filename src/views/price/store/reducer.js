@@ -2,7 +2,7 @@ const defaultState={
     price:[280,480,680,880,1080,1280,2180,1180,1480],
     total:0,
     onePrice:[],
-    num:0
+    sum:0
 }
 
 export default (state=defaultState,action)=>{
@@ -12,28 +12,47 @@ export default (state=defaultState,action)=>{
         show.className='icon icon-Group-';
         sid.style.display='block';
         let newState = JSON.parse(JSON.stringify(state));
-        if(newState.onePrice.length<6){
-            newState.onePrice.push({
-                price:newState.price[action.index],
-                num:1
-            })
-            newState.total+=newState.price[action.index];
-            return newState;
+        if(newState.onePrice.length<6||newState.sum<6){
+            for(var i=0;i<=newState.onePrice.length;i++){
+                if(newState.onePrice.length==0||(newState.onePrice[i].price!=newState.price[action.index])){
+                    newState.onePrice.push({
+                        price:newState.price[action.index],
+                        num:1
+                    })
+                    newState.sum+=1;
+                    newState.total+=newState.price[action.index]
+                    return newState;
+                }else{
+                    newState.onePrice[i].num+=1;
+                    newState.total+=newState.price[action.index]
+
+                    return newState;
+                }
+            }
         }    
     }
     if(action.type==='DELETE'){
         let newState=JSON.parse(JSON.stringify(state));
-        newState.total-=newState.onePrice[action.index].price;
+        newState.total-=newState.onePrice[action.index].price*newState.onePrice[action.index].num;
         newState.onePrice.splice(action.index, 1);
         return newState;
     }
     if(action.type==='JIA'){
         let newState = JSON.parse(JSON.stringify(state));
-        if(newState.onePrice.length<6){
-            newState.onePrice.push(action.item)
-            newState.total+=action.item
-            return newState;
-        } 
+        if(newState.onePrice.length<6||newState.sum<6){
+            for(var i=0;i<newState.onePrice.length;i++){
+                if(newState.onePrice[i].price!=action.item.price){
+                    newState.onePrice.push({
+                        price:newState.price[action.item.price],
+                        num:1
+                    })
+                    return newState;
+                }else{
+                    newState.onePrice[i].num+=1;
+                    return newState;
+                }
+            }
+        }
     }
     if(action.type==='REDUCE'){
         let newState = JSON.parse(JSON.stringify(state));
