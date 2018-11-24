@@ -1,0 +1,126 @@
+.top{
+    position: relative;
+    height: 10rem;
+    background: url(./img/integral.jpg);
+    .top_logo{
+        .top_logo_img{
+            width: 2.8rem;
+            height:2.8rem;
+            border-radius: 2.8rem;
+            background: white;
+            margin: 2rem 0.5rem 1.5rem 0.8rem;
+            border: 1px solid #E6E6E6;
+        }
+    }
+
+    .name{
+            color: white;
+            font-size: 1rem;
+            display: block;
+            margin: -4rem 0 0 4.5rem;
+    }
+
+    .grade{
+        color: white;
+        margin: 0rem 0 0 4.5rem;  
+    }
+    .plus{
+        position: absolute;
+        height: 100%;
+        width:  16rem;
+        .plus_img{
+            width: 100%;
+            margin-left:1rem;
+            margin-top: 1.6rem;
+        }
+    }
+}
+.category-wrap{
+    background: #fff;
+    margin-top: 0.3rem;
+    .flex-avg-wrap{
+        display: flex;
+        .flex-item{
+            flex: 1;
+            text-align: center;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-right: 1px solid #F4F4F4;
+            margin-top: 1rem;
+            a{
+                font-size: 1.2rem;
+                color:#FF7919;
+                font-weight: 400;
+            }
+            p{
+                color: #9C9C9C;
+                font-size: 0.7rem;
+            }
+        }
+    }
+}
+.grey{
+    height: 0.5rem;
+    background: #F6F6F6;
+    display: block;
+}
+.deom{
+    .deom_more{
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #E6E6E6;
+        a{
+            margin-left: 1rem;
+            .click{
+                font-size: 0.8rem;
+                color: #9C9C9C;
+                margin-left: 0.5rem;
+            }
+            .icon-order,.icon-lianxidianhua--,.icon-yijianfankui1,.icon-wodexiaoxi,.icon-shouhuodizhi,.icon-attention,.icon-huiyuanzhongxin,.icon-qiabao{
+                font-size: 0.8rem;
+                color: #9C9C9C;
+            }
+            .money{
+                margin-left: 6.5rem;
+                color: #9C9C9C;
+                font-size: 0.6rem;
+            }
+            .money1{
+                margin-left: 11rem;
+                color: #9C9C9C;
+            }
+            .money3{
+                margin-left: 8.5rem;
+                color: #9C9C9C;
+            }
+            .money4{
+                margin-left: 7.2rem;
+                color: #9C9C9C;
+            }
+        }
+    }
+}
+.online{
+   height: 3rem;
+   background: #F6F6F6;
+   .orgin{
+       width: 10rem;
+       height: 2rem;
+       display: block;
+       line-height: 3rem;
+       text-align: center;
+       border-radius: 2rem; 
+       margin: auto;
+       .icon-lianxidianhua--{
+           color: #FF7919;
+           font-size: 0.8rem;
+       }
+       .lianxidianhua{
+            color: #FF7919;
+            font-size: 0.8rem;
+            font-weight: 700;
+       }
+   }
+}
