@@ -1,6 +1,9 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
+import {Toast} from 'antd-mobile';
+
 import TicketUI from './TicketUI';
+
 import axios from 'axios';
 import store from '../../store/index'
 
@@ -13,7 +16,9 @@ class Tickets extends Component{
         }
     }
     componentWillMount(){
+        Toast.loading('加载中');
         this.getinfo()
+        this.getLoaction()
     }
     
     render(){
@@ -21,19 +26,22 @@ class Tickets extends Component{
             <TicketUI {...this.props}></TicketUI>  
         )
     }
+
     getinfo(){
-        axios.get('https://bird.ioliu.cn/v1/?url=m.juooo.com/Show/getShowList').then((result)=>{
+        axios.get(`https://bird.ioliu.cn/v1/?url=m.juooo.com/Show/getShowList`).then((result)=>{
+            console.log(result.data)
             axios.get('https://bird.ioliu.cn/v1/?url=m.juooo.com/index/hotsShowList').then((res)=>{
             for(var i=0;i<result.data.data.list.length;i++){
-
+                console.log(res.data)
                 if(result.data.data.list[i].venue_id===this.props.location.pathname.split('/')[2]){
                     for(var j=0;j<res.data.data.length;i++){
-                        if(res.data.data[j].show_id===result.data.data.list[i].show_id){
+                        if(res.data.data[j].venue_id===result.data.data.list[i].venue_id){
                             store.dispatch({
                                 type:'GETINFO',
                                 info:res.data.data[j],
                                 hash:this.props.location.pathname.split('/')[2]
                             })
+                            Toast.hide();
                         }
                     }
                 }else{
@@ -41,7 +49,6 @@ class Tickets extends Component{
                     history.replace("/");
                     alert('这个数据不存在')
                     return false
-                    // console.log(1)
                 }
             }
             }).catch((res)=>{
@@ -51,14 +58,17 @@ class Tickets extends Component{
         }).catch((result)=>{
             console.log(result);
         })
-        
+    }
+    getLoaction(){
+        window.localStorage.setItem('userinfo',222);
+        var a=localStorage.getItem('userinfo')
+        console.log(a)
     }
 }
 
 const mapstateToProps=({Ticket})=>{
     return{
         title:Ticket.title,
-        more:Ticket.more,
         info:Ticket.info,
         hash:Ticket.hash
     }

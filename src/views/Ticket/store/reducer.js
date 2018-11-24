@@ -1,7 +1,6 @@
 import axios from 'axios';
 const defaultState={
     title:'买票页',
-    more:'',
     hash:'',
     info:[]
 }

@@ -1,7 +1,8 @@
 const defaultState={
     price:[280,480,680,880,1080,1280,2180,1180,1480],
     total:0,
-    onePrice:[]
+    onePrice:[],
+    num:0
 }
 
 export default (state=defaultState,action)=>{
@@ -12,32 +13,22 @@ export default (state=defaultState,action)=>{
         sid.style.display='block';
         let newState = JSON.parse(JSON.stringify(state));
         if(newState.onePrice.length<6){
-            newState.onePrice.push(newState.price[action.index])
-            newState.total+=newState.price[action.index]
+            newState.onePrice.push({
+                price:newState.price[action.index],
+                num:1
+            })
+            newState.total+=newState.price[action.index];
             return newState;
         }    
     }
     if(action.type==='DELETE'){
         let newState=JSON.parse(JSON.stringify(state));
-        newState.total-=newState.onePrice[action.index];
+        newState.total-=newState.onePrice[action.index].price;
         newState.onePrice.splice(action.index, 1);
         return newState;
     }
-    if(action.type==='SHOW'){
-        // sid.style.display='none';
-        if(sid.style.display==='block'){
-            sid.style.display='none';
-            show.className='icon icon-unie624';
-        }else{
-            sid.style.display='block';
-            show.className='icon icon-Group-'
-
-        }
-    }
     if(action.type==='JIA'){
         let newState = JSON.parse(JSON.stringify(state));
-
-        console.log(action.item);
         if(newState.onePrice.length<6){
             newState.onePrice.push(action.item)
             newState.total+=action.item
@@ -50,6 +41,15 @@ export default (state=defaultState,action)=>{
             newState.total-=newState.onePrice[action.index];
             newState.onePrice.splice(action.index, 1);
             return newState;
+        }
+    }
+    if(action.type==='SHOW'){
+        if(sid.style.display==='block'){
+            sid.style.display='none';
+            show.className='icon icon-unie624';
+        }else{
+            sid.style.display='block';
+            show.className='icon icon-Group-'
         }
     }
     return state

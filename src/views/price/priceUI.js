@@ -58,10 +58,10 @@ const PriceUI =(props)=>{
                     props.onePrice.map((item,index)=>{
                         return(
                             <div className="row" key={index}>
-                                <span className="price">{item}</span>
+                                <span className="price">{item.price}</span>
                                 <div className="operate">
                                     <i className="iconfont icon-ic_reduce js-minus disable" onClick={()=>{props.reduce(index)}}></i>
-                                    <span className="num">1</span>
+                                    <span className="num">{item.num}</span>
                                     <i className="iconfont icon-zengjia js-plus" onClick={()=>{props.jia(item)}}></i>
                                     <span className="line"></span>
                                     <i className="iconfont icon-shanchu js-remove" onClick={()=>{
