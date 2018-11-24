@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { Form, Icon, Input, Button, } from 'antd';
 import axios from 'axios'
 import {Link} from 'react-router-dom'
+import '../../style/common/login.scss'
 const FormItem = Form.Item;
+
 
 class NormalLoginForm extends Component {
   

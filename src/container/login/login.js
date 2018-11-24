@@ -3,6 +3,7 @@ import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import axios from 'axios'
 import {Link} from 'react-router-dom'
 import Cookie from 'react-cookies'
+import '../../style/common/login.scss'
 
 const FormItem = Form.Item;
 class NormalLoginForm extends Component {
@@ -71,8 +72,8 @@ class NormalLoginForm extends Component {
       console.log(res.data);
       if(res.status===200){
           if(res.data.code===0){
-              Cookie.save('uasername',username)
-              this.props.history.push('/')
+              Cookie.save('username',username)
+              this.props.history.push('/My')
           }else if(res.data.code===-2){
               alert('用户名已存在')
           }

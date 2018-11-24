@@ -7,6 +7,8 @@ import './index.scss'
 import './style/base.scss';
 import WrappedNormalLoginForm from './container/login/login';
 import NormalLoginForm from './container/register/register';
+import My from './views/My/store/my';
+// import login from ''
 
 class App extends Component {
   render() {
@@ -14,8 +16,9 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div className="App">
-            <Route path='/login' component={WrappedNormalLoginForm}></Route>
+            <Route exact path='/login' component={WrappedNormalLoginForm}></Route>
             <Route path='/register' component={NormalLoginForm}></Route>
+            <Route path='/my' component={My}></Route>
           </div>
         </Router>
       </Provider>
