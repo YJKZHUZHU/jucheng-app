@@ -9,7 +9,7 @@ const Item = Popover.Item;
 const TicketUI =(props)=>{
     return(
         <Fragment>
-                {/* <NavBar
+                <NavBar
                     className='navbar'
                     mode="light"
                     rightContent={
@@ -47,7 +47,7 @@ const TicketUI =(props)=>{
                         </a>
                     </div></div>
                     演出详情
-                </NavBar> */}
+                </NavBar>
             <div className='views detail-wrapper'>
                 {/* 演出详情 */}
                 <div className='section-swiper'>

@@ -23,11 +23,6 @@ class Action extends Component {
     }
 }
 
-
-
-
-
-
 const mapStateToProps = ({ Action,Header }) => {
     return {
         navNum: Action.navNum,

@@ -65,7 +65,7 @@ class NormalLoginForm extends Component {
   register(values) {
     var username= values.username;
     var password= values.password;
-    axios.post('http://localhost:5000/register', {
+    axios.post('http://10.36.134.43:5000/register', {
       params: {
         username,
         password
