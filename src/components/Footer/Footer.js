@@ -1,13 +1,32 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Footer.scss';
-
+import { HashRouter as Router,Redirect} from 'react-router-dom'
 
 // mapStateToProps 输入
 
 // mapDispatchToProps 输出
 
+
 class Footer extends Component {
+    // constructor(props){
+    //     super(props);
+    //     console.log(props)
+    //     this.state = {
+    //     }
+    // }
+    login = (e)=> {
+        // alert(this.props)
+        console.log(e)
+        var ds = document.cookie.split('=')[1]
+        // console.log(ds)
+        if(ds != undefined){
+            // console.log(this.props)
+            // this.props.history.push('/login')
+            return (<Redirect to="/login" />);
+            
+        }
+    }
   render() {
     return(
       <div className="footer">
@@ -19,7 +38,8 @@ class Footer extends Component {
             <p className="ac"></p>
             <span>演出库</span>
         </NavLink>
-        <NavLink to="/My" exact className="tag">
+        
+        <NavLink to="/My" exact className="tag" onClick={this.login}>
             <p className="mi"></p>
             <span>我的</span>
         </NavLink>
@@ -27,6 +47,6 @@ class Footer extends Component {
     )
   }
 }
-export default Footer;
+export default  Footer;
 
 

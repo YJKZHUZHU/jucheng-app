@@ -61,7 +61,7 @@ export default (state = defaultState,action) =>{
         newState.goodList = action.list;
         newState.total = action.total;
         newState.txt = action.txt;
-        newState.caid = action.txt;
+        newState.cid = action.caid;
         newState.pageNum = 1
         return newState;
     }

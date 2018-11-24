@@ -1,6 +1,7 @@
 import React from 'react'
 import './index.scss'
 import { Button } from 'antd-mobile'
+// import {Link} from 'react-router-dom'
 const TourUI = (props) => {
   return (
     <div className='yjk-tour' style={{marginTop:'-1.8rem'}}>
@@ -54,7 +55,7 @@ const TourUI = (props) => {
                 <div className='show-item clearfix' key={index}>
                   <a className='show-left fl' href={`https://m.juooo.com/tour/tourShowInfo?sid=${item.show_id}`}>
                     <img src={item.pic}></img>
-                  </a>
+                  </a>  
                   <div className='show-right fl '>
                     <a className='title' href={`https://m.juooo.com/tour/tourShowInfo?sid=${item.show_id}`}>{item.show_name}</a>
                     <p className='times'>{item.display_show_time}</p>
