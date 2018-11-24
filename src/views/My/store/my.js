@@ -3,6 +3,7 @@ import '../my.scss'
 import {Link,Redirect} from 'react-router-dom'
 import {Cookies} from 'react-cookies'
 import { connect } from 'react-redux';
+import Footer from '../../../components/Footer/Footer';
 
 class My extends Component{
     constructor(props){
@@ -13,11 +14,12 @@ class My extends Component{
         }
     }
 
-    isLogin(props) {
-        if (document.cookie.split('=')[1]) {
-            console.log(11111111)
-        }
-    }
+    // isLogin(props) {
+    //     if (document.cookie.split('=')[1]) {
+    //         console.log(11111111);
+    //         this.props.history.push('/login')
+    //     }
+    // }
 
     componentWillMount(){
         var username = document.cookie.split('=')[1]
@@ -38,15 +40,13 @@ class My extends Component{
     }
     render(){
         return(
-            <Fragment>
+            <div className='sf-container'>
+                
                 <div className="top">
                    <div className="top_logo">
                        <img className="top_logo_img" src="https://m.juooo.com/public/basic/Home/app/app-juooo4/images/common/logo-user.png" />
                     </div>
-                       <p className="name" onClick={this.isLogin}>
-                       {/* <Link to="/login" className="username" id='change'>{this.state.username}</Link> */}
-                       {this.state.username}
-                   </p>
+                       <Link to="/login" className="username name" id='change'>{this.state.username}</Link>
                    <p className="grade">ID:6338086</p>
                    <div className="plus">
                        <img className="plus_img" src={require("../img/PLUS.png")} />
@@ -59,7 +59,7 @@ class My extends Component{
                            <p>余额</p>
                         </li>
                         <li className="flex-item">
-                           <a>26分</a>
+                           <a>0分</a>
                            <p>积分</p>
                         </li>
                         <li className="flex-item">
@@ -124,25 +124,28 @@ class My extends Component{
                         <Link to=""><i className="iconfont icon-lianxidianhua--"></i> <span className="click">联系电话</span><span className="money4">400-185-8666 ></span></Link>
                     </div>
                 </div>
-                <div className="online" style={{marginBottom:'6rem'}}>
+                <div className="online">
                    <Link to="/login" className="orgin" onClick={this.exit}><i className="iconfont icon-lianxidianhua--"></i> <span className="lianxidianhua">退出登录</span></Link>
                 </div>
-            </Fragment>
+                <Footer/>
+            </div>
         )
     }
   
 }
 
-const mapStateToProps = () => {
-    return {
+// const mapStateToProps = () => {
+//     return {
 
-    }
-}
+//     }
+// }
 
-const mapDispatchToProps = () => {
-    return {
+// const mapDispatchToProps = () => {
+//     return {
 
-    }
-}
+//     }
+// }
 
-export default connect(mapStateToProps,mapDispatchToProps)(My);
+// export default connect(mapStateToProps,mapDispatchToProps)(My);
+
+export default My;
