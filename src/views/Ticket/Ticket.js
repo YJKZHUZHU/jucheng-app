@@ -1,6 +1,5 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
-import {Toast} from 'antd-mobile';
 
 import TicketUI from './TicketUI';
 
@@ -16,7 +15,7 @@ class Tickets extends Component{
         }
     }
     componentWillMount(){
-        Toast.loading('加载中');
+        // Toast.loading('加载中');
         this.getinfo()
         this.getLoaction()
     }
@@ -41,7 +40,6 @@ class Tickets extends Component{
                                 info:res.data.data[j],
                                 hash:this.props.location.pathname.split('/')[2]
                             })
-                            Toast.hide();
                         }
                     }
                 }
