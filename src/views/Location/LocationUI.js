@@ -21,7 +21,7 @@ const LocationUI = (props) => {
           </div>
           <p className="area-title js-location">定位城市</p>
           <div className="area-wrap js-location-city">
-            <a href className="area-items js-auto-city dis">定位失败，点击重试<span className="iconfont icon-zhongxinjiazai"></span></a>
+            <a href className="area-items js-auto-city dis">{props.nowCity}</a>
           </div>
           <p className="area-title js-hot">热门城市</p>
           <div className="area-wrap">
